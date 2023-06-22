@@ -1,10 +1,10 @@
-// import { useState } from 'react';
+import Clock from './components/Clock/Clock';
 
 function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <Clock />
     </>
   )
 }
