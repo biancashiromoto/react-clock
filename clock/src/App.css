@@ -9,7 +9,7 @@
   font: 700 2.5rem 'Big Shoulders Display', cursive;
   justify-content: center;
   max-height: 200px;
-  min-width: 330px;
+  /* min-width: 330px; */
   padding: 25px;
   width: 100%;
 }
