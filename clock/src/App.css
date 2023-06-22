@@ -8,8 +8,20 @@
   display: flex;
   font: 700 2.5rem 'Big Shoulders Display', cursive;
   justify-content: center;
-  max-height: 150px;
+  /* max-height: 150px; */
   min-width: fit-content;
   padding: 25px;
   width: 100%;
+}
+
+.clock-date--container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.clock-date--container h1, .clock-date--container p {
+  margin: 0;
 }

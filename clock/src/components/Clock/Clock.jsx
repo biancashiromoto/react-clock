@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import { format } from 'date-fns';
+import '../../App.css';
 
 function Clock() {
   const [time, setTime] = useState(new Date());
@@ -13,15 +15,19 @@ function Clock() {
   }, []);
 
   const formatTime = (date) => {
-    const hours = date.getHours().toString().padStart(2, '0');
-    const minutes = date.getMinutes().toString().padStart(2, '0');
-    const seconds = date.getSeconds().toString().padStart(2, '0');
-    return `${hours}:${minutes}:${seconds}`
+    const formattedTime = format(date, 'hh:mm:ss');
+    const weekDay = format(date, 'eeee | MMM d, yyyy');
+    return (
+      <div className='clock-date--container'>
+        <h1>{formattedTime}</h1>
+        <p>{weekDay}</p>
+      </div>
+    )
   }
 
   return (
     <div>
-      <h1>{formatTime(time)}</h1>
+      {formatTime(time)}
     </div>
   )
 }
