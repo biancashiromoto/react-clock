@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@400;500;700&display=swap');
+
+#root {
+  align-items: center;
+  background-color: #2F3438;
+  box-sizing: border-box;
+  color: white;
+  display: flex;
+  font: 700 2.5rem 'Big Shoulders Display', cursive;
+  justify-content: center;
+  max-height: 150px;
+  min-width: fit-content;
+  padding: 25px;
+  width: 100%;
+}
