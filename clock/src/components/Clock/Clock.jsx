@@ -16,11 +16,13 @@ function Clock() {
 
   const formatTime = (date) => {
     const formattedTime = format(date, 'hh:mm:ss');
-    const weekDay = format(date, 'eeee | MMM d, yyyy');
+    const weekDay = format(date, 'eeee');
+    const currDate = format(date, 'MMM d, yyyy')
     return (
       <div className='clock-date--container'>
         <h1>{formattedTime}</h1>
         <p>{weekDay}</p>
+        <p>{currDate}</p>
       </div>
     )
   }
