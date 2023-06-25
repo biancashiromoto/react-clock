@@ -6,7 +6,7 @@ function Clock() {
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
-    const timer = setInterval(() =>{
+    const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
     return () => {
@@ -14,8 +14,13 @@ function Clock() {
     };
   }, []);
 
+  // useEffect(() => {
+  //   console.log(time);
+  // }, [time]);
+
   const formatTime = (date) => {
-    const formattedTime = format(date, 'hh:mm:ss');
+    console.log(date)
+    const formattedTime = format(date, 'HH:mm:ss');
     const weekDay = format(date, 'eeee | MMM d, yyyy');
     return (
       <div className='clock-date--container'>
