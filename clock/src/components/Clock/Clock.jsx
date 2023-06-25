@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import '../../App.css';
+import styles from './Clock.module.css';
 
 function Clock() {
   const [time, setTime] = useState(new Date());
+  const [isDarkModeOn, setIsDarkModeOn] = useState(true);
 
   useEffect(() => {
-    const timer = setInterval(() =>{
+    const timer = setInterval(() => {
       setTime(new Date());
     }, 1000);
     return () => {
@@ -15,7 +17,7 @@ function Clock() {
   }, []);
 
   const formatTime = (date) => {
-    const formattedTime = format(date, 'hh:mm:ss');
+    const formattedTime = format(date, 'HH:mm:ss');
     const weekDay = format(date, 'eeee | MMM d, yyyy');
     return (
       <div className='clock-date--container'>
@@ -23,11 +25,21 @@ function Clock() {
         <p>{weekDay}</p>
       </div>
     )
-  }
+  };
+
+  useEffect(() => {
+    console.log(isDarkModeOn);
+  }, [isDarkModeOn]);
 
   return (
-    <div>
-      {formatTime(time)}
+    <div className={ styles['clock-container'] }>
+      <div className={`${styles['clock-display']} ${isDarkModeOn ? '' : styles['light-mode']}`}>
+        {formatTime(time)}
+      </div>
+      <button
+        onClick={ () => setIsDarkModeOn(prevState => !prevState) }
+        className={ `${styles['toggle-mode-button']} ${ !isDarkModeOn ? '' : styles['light-mode-button'] }` }
+      />
     </div>
   )
 }
