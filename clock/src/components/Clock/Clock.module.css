@@ -6,8 +6,7 @@
   display: flex;
   font: 700 2.5rem 'Big Shoulders Display', cursive;
   justify-content: center;
-  max-height: 200px;
-  padding: 25px;
+  height: 200px;
   position: absolute;
   text-align: center;
   width: 100%;
@@ -29,7 +28,9 @@
 .toggle-mode-button {
   background-color: unset;
   border: none;
-  padding: 10px;
+  bottom: 90%;
+  box-sizing: border-box;
+  left: 85%;
   position: relative;
 }
 
