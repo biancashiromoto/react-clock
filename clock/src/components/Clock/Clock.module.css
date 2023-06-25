@@ -1,0 +1,42 @@
+.clock-display {
+  align-items: center;
+  background-color: #191919;
+  box-sizing: border-box;
+  color: rgb(231, 231, 231);
+  display: flex;
+  font: 700 2.5rem 'Big Shoulders Display', cursive;
+  justify-content: center;
+  max-height: 200px;
+  padding: 25px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.clock-display h1, .clock-display p {
+  margin: 0;
+}
+
+.clock-display p {
+  font-size: 1.25rem;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.toggle-mode-button {
+  background-color: unset;
+  border: none;
+  padding: 10px;
+  position: relative;
+}
+
+.toggle-mode-button::before {
+  content: url('../../assets/light-mode.svg');
+}
+
+.light-mode-button::before {
+  content: url('../../assets/dark-mode.svg');
+}
