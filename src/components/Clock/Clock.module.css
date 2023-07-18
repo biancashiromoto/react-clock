@@ -6,10 +6,10 @@
   display: flex;
   font: 700 2.5rem 'Big Shoulders Display', cursive;
   justify-content: center;
-  height: 200px;
+  height: 100vh;
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: 100vw;
 }
 
 .clock-display h1, .clock-display p {
