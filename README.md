@@ -8,8 +8,6 @@ I had the idea to develop it to display in my Notion main page, so I could toggl
 ## 📝 Installation
 1. Clone the repository `git clone git@github.com:biancashiromoto/react-tic-tac-toe.git`
 2. Install the dependencies in the project's root directory by running `npm install`
-3. Run the tests by running `npm test`
-4. Run all tests coverage by running `npm test -- --coverage`
 
 > 💬 If you have any suggestions or feedbacks, I would be happy to recieve them through <a href="https://www.linkedin.com/in/bshiromoto/" target="_blank">LinkedIn</a>!
 
