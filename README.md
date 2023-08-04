@@ -30,7 +30,7 @@ Eu tive a ideia de desenvolvê-lo para mostrar as horas na minha página princip
 
 ## 🖼️ Screenshots
 <div style="display:flex;">
-  <img src="./screenshots/screenshot-01.png" alt="Dark mode" height="150" width="300" />
+  <img src="./screenshots/screenshot-03.png" alt="Dark mode" height="150" width="300" />
   <img src="./screenshots/screenshot-02.png" alt="Light mode" height="150" width="300" />
 </div>
 
