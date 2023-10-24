@@ -10,7 +10,7 @@ I had the idea to develop it to display in my Notion main page, so I could toggl
 2. Install the dependencies in the project's root directory by running `npm install`
 3. Open the app in the browser `npm run dev`
 
-> 💬 If you have any suggestions or feedbacks, I would be happy to recieve them through <a href="https://www.linkedin.com/in/bshiromoto/" target="_blank">LinkedIn</a>!
+> 💬 If you have any suggestions or feedbacks, I would be happy to receive them through <a href="https://www.linkedin.com/in/bshiromoto/" target="_blank">LinkedIn</a>!
 
 <hr>
 
