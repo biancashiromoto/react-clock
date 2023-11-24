@@ -6,8 +6,8 @@ import styles from "./Clock.module.css";
 function Clock() {
   
 
-  const [time, setTime] = useState(new Date());
-  const [isDarkModeOn, setIsDarkModeOn] = useState(
+  const [time, setTime] = useState<Date>(new Date());
+  const [isDarkModeOn, setIsDarkModeOn] = useState<boolean>(
     window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches
   );
 
@@ -20,7 +20,7 @@ function Clock() {
     };
   }, []);
 
-  const formatTime = (date: Date) => {
+  const formatTime = (date: Date): JSX.Element => {
     const formattedTime = format(date, "HH:mm:ss");
     const weekDay = format(date, "eeee | MMM d, yyyy");
     return (
@@ -43,7 +43,7 @@ function Clock() {
       <button
         type="button"
         onClick={ () => {
-          setIsDarkModeOn(prevState => !prevState);
+          setIsDarkModeOn((prevState: boolean) => !prevState);
         } }
         className={ `${styles["toggle-mode-button"]} ${ !isDarkModeOn ? "" : styles["light-mode-button"] }` }
       >_</button>
