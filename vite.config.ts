@@ -12,6 +12,11 @@ const config: UserConfig = {
       },
     },
   },
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src'),
+    },
+  },
 }
 
 export default config
