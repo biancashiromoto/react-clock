@@ -1,4 +1,4 @@
-import { UserConfig } from 'vite'
+import { UserConfig } from 'vite/dist/node';
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path';
 
