@@ -4,8 +4,12 @@ import '../../App.css';
 import styles from './Clock.module.css';
 
 function Clock() {
+  
+
   const [time, setTime] = useState(new Date());
-  const [isDarkModeOn, setIsDarkModeOn] = useState(true);
+  const [isDarkModeOn, setIsDarkModeOn] = useState(
+    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+  );
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -37,7 +41,9 @@ function Clock() {
         {formatTime(time)}
       </div>
       <button
-        onClick={ () => setIsDarkModeOn(prevState => !prevState) }
+        onClick={ () => {
+          setIsDarkModeOn(prevState => !prevState);
+        } }
         className={ `${styles['toggle-mode-button']} ${ !isDarkModeOn ? '' : styles['light-mode-button'] }` }
       />
     </div>
