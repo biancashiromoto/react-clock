@@ -31,10 +31,6 @@ function Clock() {
     )
   };
 
-  useEffect(() => {
-    console.log(isDarkModeOn);
-  }, [isDarkModeOn]);
-
   return (
     <div className={ styles["clock-container"] }>
       <div className={`${styles["clock-display"]} ${isDarkModeOn ? "" : styles["light-mode"]}`}>
