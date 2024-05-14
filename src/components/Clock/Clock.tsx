@@ -1,33 +1,38 @@
 import { useState, useEffect } from "react";
-import { format } from "date-fns";
 import "../../App.css";
 import styles from "./Clock.module.css";
 import React from "react";
 import Utils from "../../utils/Utils";
+import "./Clock.css";
 
 function Clock() {
   const utils = new Utils();
-
-  const [isDarkModeOn, setIsDarkModeOn] = useState<boolean>(utils.isDarkModeOn());
   const { formattedTime, weekDay } = utils.formatTime(new Date());
 
+  const [isDarkModeOn, setIsDarkModeOn] = useState<boolean>(utils.isDarkModeOn());
+
   return (
-    <div className={ styles["clock-container"] }>
-      <div className={`${styles["clock-display"]} ${isDarkModeOn ? "" : styles["light-mode"]}`}>
-        <div className="clock-date--container">
-          <h1>{formattedTime}</h1>
-          <p>{weekDay}</p>
-        </div>
+    <main
+      className={ `clock__display ${isDarkModeOn ? "dark-mode__display" : "light-mode__display"}` }
+      data-testid="clock__container"
+    >
+      <div
+        className="date-time__container"
+        data-testid="date-time__container"
+      >
+        <h1 data-testid="formatted-time">{formattedTime}</h1>
+        <p data-testid="formatted-weekday">{weekDay}</p>
       </div>
       <button
-        aria-label="toggle-mode"
-        className={ `${styles["toggle-mode-button"]} ${ !isDarkModeOn ? "" : styles["light-mode-button"] }` }
+        aria-label="Toggle mode button"
+        className={`toggle-mode__button ${isDarkModeOn ? "light-mode__button" : "dark-mode__button"}`}
+        data-testid="toggle-mode__button"
         onClick={ () => {
           setIsDarkModeOn(prevState => !prevState);
         } }
         type="button"
       />
-    </div>
+    </main>
   )
 }
 
