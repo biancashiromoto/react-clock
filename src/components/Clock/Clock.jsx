@@ -5,11 +5,8 @@ import styles from './Clock.module.css';
 
 function Clock() {
   
-
   const [time, setTime] = useState(new Date());
-  const [isDarkModeOn, setIsDarkModeOn] = useState(
-    window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  );
+  const [isDarkModeOn, setIsDarkModeOn] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -30,10 +27,6 @@ function Clock() {
       </div>
     )
   };
-
-  useEffect(() => {
-    console.log(isDarkModeOn);
-  }, [isDarkModeOn]);
 
   return (
     <div className={ styles['clock-container'] }>
