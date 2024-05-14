@@ -8,7 +8,7 @@ import Utils from "../../utils/Utils";
 function Clock() {
   const utils = new Utils();
 
-  const [isDarkModeOn, setIsDarkModeOn] = useState<boolean>(false);
+  const [isDarkModeOn, setIsDarkModeOn] = useState<boolean>(utils.isDarkModeOn());
   const { formattedTime, weekDay } = utils.formatTime(new Date());
 
   return (
