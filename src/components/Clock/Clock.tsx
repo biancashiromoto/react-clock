@@ -28,8 +28,18 @@ function Clock() {
         className="date-time__container"
         data-testid="date-time__container"
       >
-        <h1 data-testid="formatted-time">{formattedTime}</h1>
-        <p data-testid="formatted-weekday">{formattedDate}</p>
+        <h1
+          aria-live="assertive"
+          data-testid="formatted-time"
+        >
+          {formattedTime}
+        </h1>
+        <p
+          aria-live="assertive"
+          data-testid="formatted-weekday"
+        >
+          {formattedDate}
+        </p>
       </div>
       <button
         aria-label="Toggle mode button"
