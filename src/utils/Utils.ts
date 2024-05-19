@@ -4,15 +4,12 @@ export default class Utils {
   /**
    * Formats the current date and time.
    * @param date The current date.
-   * @returns an object containing the formatted time and the day of the week.
+   * @returns an object containing the formatted time and date.
    */
-  public formatTime(date: Date) {
+  public formatTimeAndDate(date: Date) {
     const formattedTime = format(date, "HH:mm:ss");
-    const weekDay = format(date, "eeee | MMM d, yyyy");
-    return {
-      formattedTime: formattedTime,
-      weekDay: weekDay
-    };
+    const formattedDate = format(date, "eeee | MMM d, yyyy");
+    return { formattedTime, formattedDate };
   }
 
   /**
