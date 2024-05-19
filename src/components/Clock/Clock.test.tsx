@@ -1,12 +1,10 @@
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
-import Clock from "./Clock";
 import App from "../../App";
 import { vi } from "vitest";
 import Utils from "../../utils/Utils";
 
 let matchMediaMock;
-const utils = new Utils();
 
 describe("Component 'App': ", () => {
   beforeEach(() => render(<App />));
