@@ -1,0 +1,48 @@
+.toggle-mode__button {
+  background-color: unset;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 25px;
+}
+
+.toggle-mode__button::before {
+  content: url('../../assets/light-mode.svg');
+}
+
+.light-mode__button::before {
+  content: url('../../assets/dark-mode.svg');
+}
+
+.clock__display {
+  align-items: center;
+  background-color: var(--black);
+  box-sizing: border-box;
+  color: var(--off-white);
+  display: flex;
+  font: 700 2.5rem 'Big Shoulders Display', cursive;
+  justify-content: center;
+  height: 100vh;
+  position: absolute;
+  text-align: center;
+  width: 100vw;
+}
+
+.clock__display h1, .clock__display p {
+  margin: 0;
+}
+
+.clock__display p {
+  font-size: 1.25rem;
+}
+
+.light-mode__display {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.dark-mode__display {
+  background-color: var(--black);
+  color: var(--white);
+}
